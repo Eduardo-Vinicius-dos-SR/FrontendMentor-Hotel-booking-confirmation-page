@@ -6,7 +6,7 @@ function App() {
     <>
       <Aside />
 
-      <main>
+      <main className="mt-32 h-full">
         <header>
           <div>
             <p>Booking · Confirmed</p>

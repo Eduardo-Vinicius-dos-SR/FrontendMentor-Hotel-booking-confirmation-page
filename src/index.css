@@ -14,14 +14,17 @@
   font-style: normal;
   font-display: swap;
 }
-
+.font-fraunces {
+  font-variation-settings: "opsz" 72;
+  font-optical-sizing: auto;
+}
 @font-face {
   font-family: "Fraunces";
-  src: url("./assets/fonts/Fraunces-VariableFont_SOFT,wght.ttf") format("truetype-variations"),
-    url("./assets/fonts/Fraunces-VariableFont_SOFT,wght.ttf") format("truetype");
+  src: url("./assets/fonts/Fraunces-VariableFont_SOFT,wght.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
+  font-optical-sizing: auto;
 }
 
 @font-face {
@@ -88,9 +91,6 @@
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
-  --font-fraunces: "Fraunces", serif;
-  --font-sans: "DM Sans", sans-serif;
-  --font-mono: "DM Mono", monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -117,6 +117,13 @@
   flex-direction: column;
   box-sizing: border-box;
   justify-content: flex-start;
+}
+
+.article_weather {
+  background-image: url("./assets/images/icon-weather.svg");
+  background-size: 100px;   
+  background-position: top -35px right -20px;
+  background-repeat: no-repeat;
 }
 
 body {
