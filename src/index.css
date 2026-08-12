@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-fraunces: "Fraunces", serif;
+  --font-fraunces: "fraunces", serif;
   --font-sans: "DM Sans", sans-serif;
   --font-mono: "DM Mono", monospace;
 }
@@ -14,13 +14,15 @@
   font-style: normal;
   font-display: swap;
 }
+
 .font-fraunces {
   font-variation-settings: "opsz" 72;
   font-optical-sizing: auto;
 }
+
 @font-face {
-  font-family: "Fraunces";
-  src: url("./assets/fonts/Fraunces-VariableFont_SOFT,wght.ttf") format("truetype-variations");
+  font-family: "fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -28,7 +30,7 @@
 }
 
 @font-face {
-  font-family: "Fraunces";
+  font-family: "fraunces";
   src: url("./assets/fonts/Fraunces-Italic-VariableFont_SOFT,wght.ttf") format("truetype-variations"),
     url("./assets/fonts/Fraunces-Italic-VariableFont_SOFT,wght.ttf") format("truetype");
   font-weight: 100 900;
@@ -121,7 +123,7 @@
 
 .article_weather {
   background-image: url("./assets/images/icon-weather.svg");
-  background-size: 100px;   
+  background-size: 100px;
   background-position: top -35px right -20px;
   background-repeat: no-repeat;
 }
@@ -135,30 +137,4 @@ h1,
 h2 {
   /* font-family: var(); */
   font-weight: 500;
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-
-p {
-  margin: 0;
 }
