@@ -1,5 +1,4 @@
 import Aside from "./components/Aside/Aside"
-import Hero from "./components/Hero/Hero"
 
 function App() {
   // const [activeSection, setActiveSection] = useState<boolean>(false)
@@ -7,7 +6,28 @@ function App() {
     <>
       <Aside />
 
-      <Hero />
+      <main className="mt-32 h-full">
+        <header>
+          <div>
+            <p>Booking · Confirmed</p>
+            <h1>Bienvenue, <span>Lucia</span>
+            </h1>
+          </div>
+          <div>
+            <button>Print receipt</button>
+            <button>Add to calendar</button>
+          </div>
+        </header>
+
+        <section>
+          <div>
+            <article>
+            </article>
+            <article></article>
+          </div>
+          <p></p>
+        </section>
+      </main>
     </>
 
     // <!-- Receipt card -->
