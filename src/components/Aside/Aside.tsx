@@ -21,7 +21,7 @@ export default function Aside() {
     const isMenuVisible = active || isDesktop
 
     return (
-        <aside className={`fixed inset-0 lg:w-[280px] ${isMenuVisible ? 'h-full' : 'h-max border border-[var(--Neutral-400)] '} flex flex-col w-full p-4 pb-2 bg-[var(--Neutral-100)]`}>
+        <aside className={`fixed z-99 inset-0 lg:w-[280px] ${isMenuVisible ? 'h-full' : 'h-max border border-[var(--Neutral-400)] '} flex flex-col w-full p-4 pb-2 bg-[var(--Neutral-100)]`}>
             <header className={`w-full max-h-25 flex justify-between items-center ${isMenuVisible ? "pb-4 border-b border-[var(--Neutral-400)]" : "pb-2"}`}>
                 <a href="/stay">
                     <img src={logo} alt="Maison Soleil home" className={`${isMenuVisible ? 'h-12' : 'h-10'}`} />

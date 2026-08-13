@@ -5,7 +5,7 @@ export default function HotelDetails() {
         breeze: string;
         hotelName: string;
         streetAddress: string;
-        temperature: string;
+        temperature: string | number;
     };
 
     const hotelInfo: HotelInfoData = {
