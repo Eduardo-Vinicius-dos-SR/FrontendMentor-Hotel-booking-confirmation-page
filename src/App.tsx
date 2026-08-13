@@ -1,71 +1,13 @@
 import Aside from "./components/Aside/Aside"
+import Hero from "./components/Hero/Hero"
 
 function App() {
-  // const [activeSection, setActiveSection] = useState<boolean>(false)
   return (
     <>
       <Aside />
 
-      <main className="mt-32 h-full">
-        <header>
-          <div>
-            <p>Booking · Confirmed</p>
-            <h1>Bienvenue, <span>Lucia</span>
-            </h1>
-          </div>
-          <div>
-            <button>Print receipt</button>
-            <button>Add to calendar</button>
-          </div>
-        </header>
-
-        <section>
-          <div>
-            <article>
-            </article>
-            <article></article>
-          </div>
-          <p></p>
-        </section>
-      </main>
+      <Hero />
     </>
-
-    // <!-- Receipt card -->
-    // 
-    // № MS-2026
-    // 0421-AH
-
-    // Your stay
-
-    // Check in
-    // 25 Apr
-    // Saturday · 15:00
-
-    // Check out
-    // 29 Apr
-    // Wednesday · 11:00
-
-    // Room · La Garrigue · 4 nights
-    // € 620.00
-    // Breakfast · 2 guests
-    // € 96.00
-    // Tourist tax
-    // € 14.40
-
-    // Total paid
-    // € 730.40
-
-    // Paid · Wise · GBP
-    // <!-- Barcode image -->
-
-    // <!-- Note from host card -->
-    // Welcome
-    // A note from your host, Margaux.
-    // We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.
-    // Room
-    // La Garrigue
-
-    // <!-- Booking cards end -->
 
     // <!-- Guest info row starts -->
 
