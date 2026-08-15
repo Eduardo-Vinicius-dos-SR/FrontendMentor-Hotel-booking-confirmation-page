@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Menu from "../../assets/images/icon-menu.svg"
 import Close from "../../assets/images/icon-close.svg"
 import logo from "../../assets/images/logo.svg"
@@ -19,12 +19,29 @@ export default function Aside() {
     const isDesktop = useMediaQuery("(min-width: 1024px)")
 
     const isMenuVisible = active || isDesktop
+    const isMobileOverlayOpen = active && !isDesktop
+
+    useEffect(() => {
+        if (isMobileOverlayOpen) {
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = ""
+        }
+
+        return () => {
+            document.body.style.overflow = ""
+        }
+    }, [isMobileOverlayOpen])
+
+    useEffect(() => {
+        if (isDesktop) setActive(false)
+    }, [isDesktop])
 
     return (
-        <aside className={`fixed z-99 inset-0 lg:w-[280px] ${isMenuVisible ? 'h-full' : 'h-max border border-[var(--Neutral-400)] '} flex flex-col w-full p-4 pb-2 bg-[var(--Neutral-100)]`}>
-            <header className={`w-full max-h-25 flex justify-between items-center ${isMenuVisible ? "pb-4 border-b border-[var(--Neutral-400)]" : "pb-2"}`}>
+        <aside className={`fixed z-99 inset-0 lg:w-[250px] 2xl:w-[290px] ${isMenuVisible ? 'h-full' : 'h-max border-b'} lg:border-r border-[var(--Neutral-400)] flex flex-col w-full p-4 lg:p-3 2xl:p-4 pb-2 bg-[var(--Neutral-100)]`}>
+            <header className={`w-full max-h-25 lg:max-h-20 flex justify-between items-center ${isMenuVisible ? "pb-4 border-b border-[var(--Neutral-400)]" : "pb-2"}`}>
                 <a href="/stay">
-                    <img src={logo} alt="Maison Soleil home" className={`${isMenuVisible ? 'h-12' : 'h-10'}`} />
+                    <img src={logo} alt="Maison Soleil home" className={`${isMenuVisible ? 'h-12' : 'h-10'} lg:h-9 2xl:h-11`} />
                 </a>
                 <button type="button" onClick={() => setActive(!active)}
                     aria-expanded={active} aria-controls="main-nav" aria-label={active ? "Close menu" : "Open menu"}
@@ -34,7 +51,7 @@ export default function Aside() {
             </header>
 
             {isMenuVisible && (
-                <div id="main-nav" className="flex flex-col flex-1 w-full">
+                <div id="main-nav" className="flex flex-col flex-1 w-full overflow-y-auto">
                     <nav className="w-full py-4 mb-auto">
                         <ul className="flex flex-col">
                             <NavItem href="/stay" icon={StayIcon} label="Your Stay" badge={notificationCount} />

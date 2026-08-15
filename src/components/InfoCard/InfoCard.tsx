@@ -1,7 +1,7 @@
 import type { ReactNode } from "react"
 
 type InfoCardProps = {
-    icon: any
+    icon: string
     iconBg: string
     label: string
     labelColor: string
@@ -14,23 +14,23 @@ type InfoCardProps = {
 
 export default function InfoCard({ icon, iconBg, label, labelColor, number, title, subtitle, description, children }: InfoCardProps) {
     return (
-        <article className="w-full flex flex-col gap-4 text-left bg-[var(--Neutral-0)] rounded-2xl p-4 border border-[var(--Neutral-400)] shadow-[var(--shadow)]">
+        <article className="w-full flex flex-col gap-4 2xl:gap-5 text-left bg-[var(--Neutral-0)] rounded-2xl p-4 2xl:p-5 border border-[var(--Neutral-400)] shadow-[var(--shadow)]">
             <header className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                    <span className={`flex items-center justify-center w-9 h-9 p-2 rounded-lg shrink-0 ${iconBg}`}>
+                <div className="flex items-center gap-2 2xl:gap-3">
+                    <span className={`flex items-center justify-center w-9 h-9 p-2 2xl:w-11 2xl:h-11 rounded-lg shrink-0 ${iconBg}`}>
                         <img src={icon} alt={`Icon ${label}`} className="w-full" />
                     </span>
-                    <span className={`text-base font-mono font-semibold uppercase tracking-widest ${labelColor}`}>{label}</span>
+                    <span className={`text-base lg:text-sm 2xl:text-base font-mono font-semibold uppercase tracking-widest ${labelColor}`}>{label}</span>
                 </div>
                 <span className={`font-fraunces font-normal text-2xl ${labelColor}`}>{number}</span>
             </header>
 
             <div className="flex flex-col gap-1">
-                <h3 className="font-fraunces text-2xl text-[var(--Neutral-900)]">{title}</h3>
-                <p className="text-xs text-[var(--Neutral-600)]">{subtitle}</p>
+                <h3 className="font-fraunces text-2xl lg:text-xl 2xl:text-2xl text-[var(--Neutral-900)]">{title}</h3>
+                <p className="text-xs 2xl:text-sm text-[var(--Neutral-600)]">{subtitle}</p>
             </div>
 
-            {description && <p className="text-sm text-[var(--Neutral-700)] leading-relaxed">{description}</p>}
+            {description && <p className="text-sm lg:text-xs 2xl:text-sm text-[var(--Neutral-700)] leading-relaxed">{description}</p>}
 
             {children}
         </article>
