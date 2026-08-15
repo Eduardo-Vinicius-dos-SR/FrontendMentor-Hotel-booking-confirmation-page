@@ -6,6 +6,7 @@ import WelcomeCard from "../WelcomeCard/WelcomeCard"
 import { buildGoogleCalendarUrl } from "../../utils/calendar"
 import { shareOrDownloadFile } from "../../utils/fileActions"
 import Button from "../Button/Button"
+import PageLayout from "../PageLayout/PageLayout"
 
 export default function Hero() {
     const userName = "Lucia"
@@ -72,15 +73,15 @@ export default function Hero() {
     }
 
     return (
-        <main className="mt-18 lg:mt-0 p-4 lg:p-8 2xl:p-10 lg:pl-[calc(240px+3rem)] 2xl:pl-[calc(300px+3rem)] h-full w-full flex flex-col justify-start gap-12 lg:gap-10 2xl:gap-12">
+        <PageLayout>
             <header className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6">
                 <div className="flex flex-col gap-3 lg:gap-1 2xl:gap-2 text-left">
                     <p className="text-[11px] 2xl:text-xs uppercase font-semibold text-[var(--Neutral-600)]"><span className="mr-2">Booking</span> · <span className="ml-2">Confirmed</span></p>
                     <h1 className="text-4xl lg:text-3xl 2xl:text-4xl font-bold text-[var(--Neutral-800)] font-fraunces font-normal">Bienvenue, <span className="text-[var(--Terracotta-700)] font-base italic">{userName}.</span></h1>
                 </div>
 
-                <div className="flex flex-col items-center lg:items-end gap-2 w-full lg:w-auto">
-                    <div className="flex w-full lg:w-auto justify-center lg:justify-end gap-4 lg:gap-3 2xl:gap-4 text-sm">
+                <div className="flex flex-col items-center lg:items-end gap-2 w-full px-2 lg:p-0 lg:w-auto">
+                    <div className="flex w-full lg:w-auto justify-center lg:justify-end gap-2 flex-wrap lg:gap-3 2xl:gap-4 text-sm">
                         <Button variant="outline" onClick={handlePrintReceipt}>Print receipt</Button>
                         <Button variant="solid" onClick={handleAddToCalendar}>Add to calendar</Button>
                     </div>
@@ -110,6 +111,6 @@ export default function Hero() {
 
                 <GuestInfo />
             </section>
-        </main>
+        </PageLayout>
     )
 }
