@@ -25,8 +25,7 @@ export default function WifiDetails({ network, password }: WifiDetailsProps) {
                 <span className="uppercase tracking-widest text-[var(--Neutral-600)]">Password</span>
                 <span className="flex items-center gap-2 text-[var(--Neutral-900)]">
                     {password}
-                    <button type="button" onClick={handleCopy}
-                        className="flex uppercase items-center gap-1 px-2 tracking-wide py-0.5 rounded-full border border-[var(--Neutral-400)] text-[var(--Neutral-600)] cursor-pointer hover:bg-[var(--Neutral-0)]">
+                    <button type="button" onClick={handleCopy} className="flex uppercase items-center gap-1 px-2 tracking-wide py-0.5 rounded-full border border-[var(--Neutral-400)] text-[var(--Neutral-600)] cursor-pointer hover:bg-[var(--Neutral-0)] focus:bg-[var(--Neutral-0)] focus:outline-3 focus:outline-[var(--Terracotta-700)] active:opacity-50 outline-offset-2">
                         {copied ? "Copied" : "Copy"}
                     </button>
                 </span>

@@ -39,8 +39,7 @@ export default function Messages() {
             <form className="flex items-center gap-3 bg-[var(--Neutral-0)] rounded-full border border-[var(--Neutral-400)] shadow-[var(--shadow)] p-2 pl-5">
                 <input type="text" placeholder="Write a message to Margaux…"
                     className="flex-1 bg-transparent text-sm lg:text-xs 2xl:text-sm text-[var(--Neutral-800)] placeholder:text-[var(--Neutral-600)] focus:outline-none" />
-                <button type="submit"
-                    className="px-6 py-2 rounded-full bg-[var(--Neutral-900)] text-[var(--Neutral-100)] text-sm lg:text-xs font-bold cursor-pointer hover:bg-[var(--Neutral-700)]">
+                <button type="submit" className="px-6 py-2 rounded-full bg-[var(--Neutral-900)] text-[var(--Neutral-100)] text-sm lg:text-xs font-bold cursor-pointer hover:bg-[var(--Neutral-700)] focus:outline-3 focus:outline-[var(--Terracotta-700)] active:opacity-50 outline-offset-2">
                     Send
                 </button>
             </form>
